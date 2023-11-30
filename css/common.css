@@ -1,0 +1,291 @@
+@charset "UTF-8";
+/*font-family: 'Noto Sans KR', sans-serif;*/
+@import url("https://fonts.googleapis.com/css2?family=Gasoek+One&family=Noto+Sans+KR:wght@100;400&display=swap");
+/*완주누리체*/
+@font-face {
+  font-family: "TTWanjunuricheR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/TTWanjunuricheR.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --pointColor: rgba(255, 245, 15, 1);
+  --mainColor1: rgba(0, 0, 0, 1);
+  --mainColor2: rgba(255, 255, 255, 1);
+  --mainColor3: rgba(217, 217, 217, 1);
+}
+.mw {
+  max-width: 1400px;
+  width: calc(100% - 2rem);
+  margin: auto;
+}
+.wrap {
+  overflow: hidden;
+}
+body {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+}
+/*.event*/
+.event {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: var(--mainColor1);
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+.event span {
+  color: var(--pointColor);
+}
+.event i {
+  position: absolute;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/*header*/
+.hd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 40px;
+  background-color: var(--mainColor3);
+  z-index: 9999;
+}
+.hd img {
+  width: 100%;
+}
+.hd .logo {
+  width: 25%;
+  padding: 0.5rem 0 0 3rem;
+}
+/*header gnb 원뎁스*/
+.hd nav {
+  order: -1;
+  position: relative;
+}
+.hd .gnb a {
+  display: block;
+  padding: 1.3em 2em;
+}
+.hd .gnb > li > a {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.hd .sub a {
+  font-size: 0.8em;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.hd .sub a:hover {
+  font-size: 1em;
+  font-weight: bold;
+}
+/* pc버전 hd */
+@media (min-width: 1001px) {
+  .hd .gnb {
+    display: flex;
+  }
+  .hd .gnb::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color: var(--mainColor2);
+    top: 69px;
+    left: 0;
+    transition: 0.3s;
+  }
+  .hd .gnb:hover::before {
+    height: 310px;
+  }
+  .hd .gnb > li {
+    position: relative;
+  }
+  .hd .gnb > li > a {
+    position: relative;
+  }
+  .hd .gnb:hover .sub {
+    height: 300px;
+  }
+  /*header sub 투뎁스*/
+  .hd .sub {
+    display: block !important;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  .hd .sub a {
+    padding: 1.3em 0 1.3em 2rem;
+  }
+}
+/*header .person .ham*/
+.hd div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.3rem;
+  width: 37%;
+}
+.hd .person a {
+  display: block;
+  padding: 0.5rem;
+}
+.hd .person i {
+  display: none;
+}
+.hd .ham {
+  cursor: pointer;
+  padding-right: 1rem;
+  font-size: 1.5rem;
+  display: none;
+}
+
+/*aside*/
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+aside img {
+  width: 40px;
+  height: 40px;
+}
+aside .goTop {
+  position: relative;
+  right: -8rem;
+  transition: 0.3s;
+}
+/*footer*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-color: var(--mainColor1);
+  color: var(--mainColor2);
+  padding: 5rem 1rem;
+  margin-top: 10vw;
+  line-height: 1.5rem;
+}
+footer div {
+  display: flex;
+  gap: 3rem;
+}
+footer em {
+  font-weight: bold;
+}
+footer div p em {
+  color: var(--pointColor);
+}
+footer a {
+  border-bottom: 1px solid var(--mainColor2);
+  transition: 0.3s;
+}
+footer a:hover {
+  font-weight: bold;
+}
+
+/*모바일버전*/
+@media (max-width: 1000px) {
+  :root {
+    font-size: 0.8rem;
+  }
+  .hd .logo {
+    width: 25%;
+    padding: 1rem;
+  }
+  .hd nav {
+    display: none;
+  }
+  .hd nav.on {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: -10px;
+    right: 0;
+    backdrop-filter: blur(3px);
+  }
+  .hd nav .sub.on {
+    display: block;
+  }
+  .hd .person a span {
+    border: 1px solid green;
+    display: none;
+  }
+  .hd .person a:nth-of-type(1) {
+    position: relative;
+    right: -40%;
+  }
+  .hd .person i {
+    display: block;
+    font-size: 1.3rem;
+    padding: 1rem;
+  }
+  .hd .person a:nth-of-type(2) {
+    display: none;
+  }
+  .hd .gnb a {
+    width: 100%;
+  }
+  .hd .gnb > li {
+    z-index: 10;
+  }
+  .hd .gnb {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    padding-top: 36px;
+  }
+  .hd .gnb::before {
+    content: "";
+    position: fixed;
+    width: 60%;
+    height: 100%;
+    right: 0;
+    background-color: white;
+  }
+  .hd .gnb .sub {
+    display: none;
+    padding-left: 0.6rem;
+  }
+  .hd .ham {
+    display: flex;
+    width: 6%;
+    padding: 1rem;
+    z-index: 99999;
+  }
+  footer > p {
+    display: none;
+  }
+  footer div {
+    flex-direction: column;
+  }
+}
+@media (max-width: 650px) {
+  :root {
+    font-size: 0.7rem;
+  }
+  .hd img {
+    width: 200px;
+  }
+  .hd nav.on {
+    top: 0;
+  }
+}

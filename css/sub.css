@@ -1,0 +1,200 @@
+section {
+  line-height: 1.7rem;
+  width: calc(100% - 10rem);
+  margin: 10rem auto 0;
+  position: relative;
+  padding-top: 4rem;
+}
+section h2 {
+  display: none;
+}
+section .method {
+  display: flex;
+  gap: 3rem;
+}
+section h3 {
+  font-family: "TTWanjunuricheR";
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 2rem;
+}
+.espre_main,
+.brew_main {
+  display: flex;
+  position: relative;
+}
+.espre_main > div {
+  width: 52.5%;
+}
+.brew_main > div {
+  width: 50%;
+}
+.espre_main img,
+.brew_main img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.espre_main ul {
+  width: calc(100% - 52.5%);
+  list-style: number;
+  margin-left: 1rem;
+}
+.espre_main ul,
+.brew_main p {
+  padding-left: 2rem;
+  width: 45%;
+}
+.bask1,
+.brew_hot,
+.brew_iced,
+.bask2 {
+  padding: 1rem;
+  margin-top: 3vw;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mainColor3);
+  height: 5.5rem;
+  overflow: hidden;
+}
+.bask1.on,
+.brew_hot.on,
+.brew_iced.on,
+.bask2.on {
+  height: auto;
+}
+.brew_hot h4,
+.brew_iced h4,
+.bask1 h4,
+.bask2 h4 {
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.3s;
+}
+.brew_hot h4,
+.brew_iced h4,
+.bask1 h4,
+.bask2 h4,
+.dec strong {
+  font-size: 2rem;
+  padding-top: 1rem;
+  font-family: "TTWanjunuricheR";
+  font-weight: bold;
+}
+.brew_hot h4::after,
+.brew_iced h4::after,
+.bask1 h4::after,
+.bask2 h4::after {
+  content: "\f0d7";
+  font-family: "Font Awesome 5 Free";
+  padding-left: 1rem;
+}
+.brew_hot h4:hover,
+.brew_iced h4:hover,
+.bask1 h4:hover,
+.bask2 h4:hover {
+  transform: scale(1.2);
+  transform-origin: left;
+}
+.dec {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2rem 0 2rem 1rem;
+}
+.dec strong {
+  padding-top: 0;
+  font-size: 1.2rem;
+}
+.dec ul {
+  list-style: number;
+}
+.brew_iced .dec ul:nth-last-of-type(1) {
+  margin-top: 1rem;
+}
+.dec p {
+  padding-bottom: 1rem;
+}
+/* table */
+table {
+  margin-top: 2rem;
+  border-collapse: collapse;
+}
+table th,
+table td {
+  padding: 0 1rem;
+  height: 30px;
+  text-align: center;
+  border: 1px solid var(--mainColor3);
+  vertical-align: middle;
+}
+table th {
+  font-family: "TTWanjunuricheR";
+  background-color: rgba(51, 51, 51, 1);
+  color: white;
+}
+table td {
+  background-color: var(--mainColor2);
+}
+/* table 끝*/
+
+.adv {
+  width: 50%;
+  padding: 1rem;
+  margin-top: 3vw;
+  background-color: var(--mainColor1);
+  color: var(--mainColor2);
+  position: relative;
+  right: 0;
+  top: 0;
+}
+.adv a {
+  color: var(--pointColor);
+  transition: 0.3s;
+}
+.adv a:hover {
+  border-bottom: 1px solid;
+}
+/*모바일버전*/
+@media (max-width: 1400px) {
+  section .method {
+    display: block;
+  }
+  section .espre {
+    margin-top: 5vw;
+  }
+  .adv {
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  section {
+    width: calc(100% - 2rem);
+    margin: auto;
+  }
+  section .method {
+    padding-top: 10rem;
+  }
+  .espre_main,
+  .brew_main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .espre_main > div {
+    width: 100%;
+  }
+  .brew_main > div {
+    width: 100%;
+  }
+  .espre_main img,
+  .brew_main img {
+    width: 100%;
+  }
+  .espre_main ul,
+  .brew_main p {
+    padding-left: 0;
+    width: 100%;
+  }
+}
