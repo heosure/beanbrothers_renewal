@@ -50,6 +50,9 @@
   font-size: 1rem;
   top: 8vw;
 }
+.sec1 .swiper-slide a:nth-of-type(1) {
+  pointer-events: none;
+}
 .sec1 .swiper-slide a:nth-of-type(2) {
   color: var(--mainColor2);
   font-size: 1rem;
@@ -450,6 +453,7 @@
     display: flex;
     align-items: center;
     padding-left: 2rem;
+    pointer-events: all;
   }
   .sec1 .swiper-slide strong::after {
     content: "\f061";

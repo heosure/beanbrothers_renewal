@@ -64,13 +64,14 @@ section h3 {
 .bask2.on {
   height: auto;
 }
-.brew_hot h4,
-.brew_iced h4,
-.bask1 h4,
-.bask2 h4 {
-  cursor: pointer;
+.title {
+  display: flex;
   transform: scale(1);
   transition: 0.3s;
+}
+.title:hover {
+  transform: scale(1.2);
+  transform-origin: left;
 }
 .brew_hot h4,
 .brew_iced h4,
@@ -82,20 +83,20 @@ section h3 {
   font-family: "TTWanjunuricheR";
   font-weight: bold;
 }
-.brew_hot h4::after,
-.brew_iced h4::after,
-.bask1 h4::after,
-.bask2 h4::after {
-  content: "\f0d7";
-  font-family: "Font Awesome 5 Free";
+.brew_hot i,
+.brew_iced i,
+.bask1 i,
+.bask2 i {
   padding-left: 1rem;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.brew_hot h4:hover,
-.brew_iced h4:hover,
-.bask1 h4:hover,
-.bask2 h4:hover {
-  transform: scale(1.2);
-  transform-origin: left;
+.brew_hot i.on,
+.brew_iced i.on,
+.bask1 i.on,
+.bask2 i.on {
+  transform: rotateX(180deg);
 }
 .dec {
   display: flex;

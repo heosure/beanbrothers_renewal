@@ -1,8 +1,10 @@
-const $onTitle = document.querySelectorAll(".method > div > div h4");
+const $onArr = document.querySelectorAll(".method > div > div > div  i");
+console.log($onArr);
 
-$onTitle.forEach((title) => {
+$onArr.forEach((title) => {
   title.addEventListener("click", (e) => {
-    let parH = e.target.parentElement;
-    parH.classList.toggle("on");
+    let divH = e.target.parentElement.parentElement;
+    divH.classList.toggle("on");
+    e.target.classList.toggle("on");
   });
 });
